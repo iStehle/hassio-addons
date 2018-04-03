@@ -2,7 +2,7 @@
 FROM resin/rpi-raspbian:stretch
 MAINTAINER Jan Schulz-Hofen <hassio@0.jan.sh>
 
-RUN apt-get update && apt-get -y install apt-transport-https wget ca-certificates apt-utils gnupg
+RUN apt-get update && apt-get -y install apt-transport-https wget ca-certificates apt-utils gnupg tzdata
 RUN wget https://homegear.eu/packages/Release.key && apt-key add Release.key && rm Release.key
 RUN echo 'deb https://homegear.eu/packages/Raspbian/ stretch/' >> /etc/apt/sources.list.d/homegear.list
 RUN apt-get update && apt-get -y install homegear homegear-nodes-core homegear-nodes-extra homegear-homematicbidcos homegear-homematicwired homegear-insteon homegear-max homegear-philipshue homegear-sonos homegear-kodi homegear-ipcam homegear-beckhoff homegear-knx homegear-enocean homegear-intertechno homegear-influxdb vim less htop
