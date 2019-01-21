@@ -5,6 +5,7 @@
   "description": "Homegear as a Hassio add-on",
   "startup": "before",
   "boot": "auto",
+  "auto_uart": true,
   "gpio": true,
   "privileged": [
     "SYS_ADMIN",
@@ -21,9 +22,5 @@
   "options": {
   },
   "schema": {
-  },
-  "devices": [
-    "/dev/ttyAMA0:/dev/ttyAMA0:rwm",
-    "/dev/ttyACM0:/dev/ttyACM0:rwm"
-  ]
+  }
 }
